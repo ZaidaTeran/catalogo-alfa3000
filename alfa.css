@@ -1,0 +1,200 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: #003366; /* Azul Oscuro */
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 100px;
+    border-bottom: #00a8e8 3px solid; /* Acento Azul Claro */
+}
+
+#branding h1 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+nav {
+    float: right;
+    margin-top: -40px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+#hero {
+    min-height: 250px;
+    background: linear-gradient(rgba(0,51,102,0.8), rgba(0,51,102,0.8)), 
+                url('https://images.unsplash.com/photo-1558441719-ffb4d035186f?q=80&w=1000') no-repeat center center/cover;
+    text-align: center;
+    color: #fff;
+    padding-top: 80px;
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Productos Grid */
+.section-title {
+    text-align: center;
+    margin: 40px 0;
+    color: #003366;
+    font-size: 2rem;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.img-placeholder {
+    width: 100%;
+    height: 180px;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.card h4 {
+    margin-bottom: 5px;
+    color: #003366;
+}
+
+.modelo {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.precio {
+    font-size: 1.4rem;
+    color: #d32f2f;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.btn-cotizar {
+    background: #25d366; /* Color WhatsApp */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Contenedor del botón fijo */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+}
+
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+}
+
+/* Efecto al pasar el mouse */
+.btn-whatsapp-fijo:hover {
+    background-color: #128c7e;
+    transform: scale(1.1); /* Crece un poquito */
+}
+
+/* Estilo de la imagen (Logo) */
+.btn-whatsapp-fijo img {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+}
+
+/* Estilo del texto */
+.btn-whatsapp-fijo span {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Adaptación para celulares pequeños */
+@media (max-width: 480px) {
+    .btn-whatsapp-fijo span {
+        display: none; /* Esconde el texto en móviles */
+    }
+    .btn-whatsapp-fijo {
+        padding: 12px;
+        border-radius: 50%; /* Se vuelve un círculo */
+    }
+    .btn-whatsapp-fijo img {
+        margin-right: 0;
+    }
+}
